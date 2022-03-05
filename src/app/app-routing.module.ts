@@ -7,7 +7,7 @@ const routes: Routes = [
     redirectTo: "templates",
   },
   {
-    path: "templates",
+    path: "template",
     loadChildren: () => import("./template/template.module").then(m => m.TemplateModule),
   },
   {
