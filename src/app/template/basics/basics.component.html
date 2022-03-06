@@ -12,7 +12,7 @@
         </label>
         <div class="col-sm-9">
           <input type="text"
-                 ngModel
+                 [ngModel]="initForm.name"
                  required
                  name="product"
                  autocomplete="off"
@@ -32,7 +32,7 @@
         </label>
         <div class="col-sm-9">
           <input type="number"
-                 ngModel
+                 [ngModel]="initForm.price"
                  customMin
                  [minimum]="0"
                  name="price"
@@ -53,6 +53,7 @@
         <div class="col-sm-9">
           <input type="number"
                  ngModel
+                 [ngModel]="initForm.stock"
                  name="stock"
                  class="form-control"
                  placeholder="Existencias del producto">
