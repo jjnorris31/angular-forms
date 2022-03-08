@@ -1,1 +1,65 @@
-<p>dynamic works!</p>
+<h2>
+  Template
+  <small>Dinámicos</small>
+</h2>
+
+<form>
+
+  <div class="mb-3 row">
+    <label for="" class="col-sm-3 col-form-label">
+      Nombre
+    </label>
+    <div class="col-sm-9">
+      <input type="text"
+             required
+             class="form-control"
+             placeholder="Nombre de la persona">
+      <span class="form-text text-danger">
+        Este campo es obligatorio
+      </span>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="" class="col-sm-3 col-form-label">
+      Agregar
+    </label>
+    <div class="col-sm-9">
+      <div class="input-group">
+        <input class="form-control"
+               name="favoriteName"
+               placeholder="Nombre del juego">
+        <button class="btn btn-outline-primary"
+                type="button">
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="" class="col-sm-3 col-form-label">
+      Favoritos
+    </label>
+    <div class="col-sm-9">
+      <div class="input-group">
+        <input class="form-control mb-1">
+        <button class="btn btn-outline-danger"
+                type="button">
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9">
+      <button type="button"
+              class="btn btn-primary">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form>
+

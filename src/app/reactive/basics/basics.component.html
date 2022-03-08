@@ -1,1 +1,92 @@
-<p>basics works!</p>
+<h2>Template: Básicos</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <form [formGroup]="basicForm" (ngSubmit)="save()">
+
+
+      <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">
+          Nombre
+        </label>
+        <div class="col-sm-9">
+          <input type="text"
+                 required
+                 name="name"
+                 formControlName="name"
+                 autocomplete="off"
+                 class="form-control"
+                 minlength="3"
+                 placeholder="Nombre del producto">
+          <span class="form-text-text-danger"
+                *ngIf="validateField('name')">
+              Debe de ser 3 letras
+            </span>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">
+          Precio
+        </label>
+        <div class="col-sm-9">
+          <input type="number"
+                 name="price"
+                 required
+                 formControlName="price"
+                 class="form-control"
+                 placeholder="Precio del producto">
+          <span class="form-text-text-danger"
+                *ngIf="validateField('price')">
+              El precio debe ser mayor a 0
+            </span>
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="" class="col-sm-3 col-form-label">
+          Existencias
+        </label>
+        <div class="col-sm-9">
+          <input type="number"
+                 name="stock"
+                 formControlName="stock"
+                 class="form-control"
+                 placeholder="Existencias del producto">
+          <span class="form-text-text-danger"
+                *ngIf="validateField('stock')">
+              El precio debe ser mayor a 0
+            </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary float-end"
+                  type="submit">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <span>Valid</span>
+    <pre>{{basicForm.valid}}</pre>
+
+    <span>Pristine</span>
+    <pre>{{basicForm.pristine}}</pre>
+
+
+    <span>Touched</span>
+    <pre>{{basicForm.touched}}</pre>
+
+
+    <span>Value</span>
+    <pre>{{basicForm.value | json}}</pre>
+  </div>
+</div>
+
