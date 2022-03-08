@@ -1,1 +1,86 @@
-<p>switches works!</p>
+<h2>
+  Switches
+</h2>
+
+<form #switchesForm="ngForm"
+      autocomplete="off">
+  <div class="row mb-3">
+    <label for="" class="col-sm-3 col-form-label">
+      Género
+    </label>
+
+    <div class="col-sm-9">
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               value="M"
+               required
+               name="radioGenero"
+               [(ngModel)]="person.gender"
+               id="flexCheckDefault">
+        <label class="form-check-label"
+               for="flexCheckDefault">
+          Masculino
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+               [(ngModel)]="person.gender"
+               type="radio"
+               value="F"
+               required
+               name="radioGenero"
+               id="flexCheckChecked">
+        <label class="form-check-label"
+               for="flexCheckChecked">
+          Femenino
+        </label>
+      </div>
+    </div>
+
+
+    <label for="" class="col-sm-3 col-form-label">
+      Notificaciones
+    </label>
+    <div class="col-sm-9">
+      <div class="form-check form-switch">
+        <input class="form-check-input"
+               type="checkbox"
+               role="switch"
+               name="switchNotifications"
+               required
+               [(ngModel)]="person.notifications"
+               id="flexSwitchCheckDefault">
+        <label class="form-check-label"
+               for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input"
+               name="terms"
+               [(ngModel)]="terms"
+               required
+               type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Términos y condiciones
+        </label>
+      </div>
+    </div>
+
+
+  </div>
+</form>
+
+<div class="row">
+  <div class="col">
+
+    <span>Persona</span>
+    <pre>{{person | json}}</pre>
+
+    <span>Valid</span>
+    <pre>{{switchesForm.valid}}</pre>
+
+    <span>Pristine</span>
+    <pre>{{switchesForm.pristine}}</pre>
+  </div>
+</div>
