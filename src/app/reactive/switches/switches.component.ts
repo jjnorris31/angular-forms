@@ -25,11 +25,11 @@ export class SwitchesComponent implements OnInit {
 
     this.switchesForm.get('gender')?.valueChanges.subscribe(value => {
       console.log(value);
-    })
+    });
 
     this.switchesForm.valueChanges.subscribe(form => {
       console.log(form);
-    })
+    });
   }
 
   save() {
